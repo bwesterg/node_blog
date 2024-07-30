@@ -1,10 +1,12 @@
 import React from 'react'
+import Logo from "../img/logo.svg"
 
 const Footer = () => {
   return (
-    <div>
-      Footer
-    </div>
+    <footer>
+      <img src={Logo} />
+      <span>Made with concentration and <b>React</b></span>
+    </footer>
   )
 }
 
