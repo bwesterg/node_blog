@@ -1,7 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react'
 
-const Home = () => {
+const Menu = () => {
 
   const posts = [
     {
@@ -40,30 +39,20 @@ const Home = () => {
       desc: "kjkdfjkldjfkljlksj",
       img: "https://www.exoticca.com/uk/magazine/wp-content/uploads/2021/06/matterhorn-BLOG-mountains.png"
     },
-  ]
+  ]; 
 
   return (
-    <div className="home">
-      <div className="posts">
-        {posts.map((post)=>(
-          <div className="post" key={post.id}>
-            <div className="img">
-              <img src={post.img} alt={`image for ${post.title}`}/>
-            </div>
-            <div className="content">
-              <Link to={`/post/${post.id}`} className="link">
-                <h2>{post.title}</h2>
-              </Link>
-              <p>{post.desc}</p>
-              <button>Read More</button>
-            </div>
-          </div>
-        ))}
-      </div>
-      
+    <div className="menu">
+      <h2>Other posts you may like</h2>
+      {posts.map((post)=>(
+        <div className="post" key={post.id}>
+          <img src={post.img} alt={`Image for post ${post.title}`}/>
+          <h3>{post.title}</h3>
+          <button>Read More</button>
+        </div>
+      ))}
     </div>
   )
 }
 
-export default Home
-Home
+export default Menu
